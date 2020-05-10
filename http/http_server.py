@@ -49,7 +49,7 @@ class MyServer(BaseHTTPRequestHandler):
 
         content_len = int(self.headers['Content-Length'])         # Cuanta informacion hay en el header
         post_body = self.rfile.read(content_len)                  # Extrae la información
-        self.wfile.write('received post request: {}'.format(post_body).encode())
+        self.wfile.write('POST recibido: {}'.format(post_body).encode())
 
     def do_PUT(self):
         content_len = int(self.headers['Content-Length'])         # Recupera info del header
